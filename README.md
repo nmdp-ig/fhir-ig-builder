@@ -9,7 +9,9 @@ docker run -it -v $(pwd)/app-local:/app/app-local -p 80:80 fhir-ig-builder:lates
 ### Restart apache2 so that the php modules are loaded.  Not sure why this doesn't work already.
 Run this command /etc/init.d/apache2 restart
 ### Initialize IG 
-sushi --init 
+sushi --init # Accept the default name ExampleIG.
+### Change Directory to ExampleIG
+"cd ExampleIG".
 ### Run the publisher against the fsh - run this from inside ExampleIG dir.
 java -jar ../input-cache/publisher.jar -ig ig.ini
 ### Optional - publish to the URL.  Or, just go on to next step
