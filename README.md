@@ -1,10 +1,3 @@
-### License
-Apache 2.0
-
-### TODO
-1.    Figure out why docker doesn't run apache2 with php mod by default.  
-2.    Determine how to run sushi-config.yaml as preconfig for sushi --init.  #Publish web site to localhost so that it is all working as designed for test suite after docker container is running. 
-
 # FHIR IG Base Image
 This Docker image contains the FHIR Implementation Guide (IG) publisher tool and all dependencies installed. It also provides "sushi" tool for projects using FHIR Shorthand.
 ### Clone the github repository. 
@@ -25,6 +18,13 @@ java -jar ../input-cache/publisher.jar -no-sushi -ig ig.ini -publish http://loca
 cp -r output/* /var/www/html/
 ### Look for index file in vscode or launch the index.html localhost browser on port 80
 http://localhost 
+
+### License
+Apache 2.0
+
+### TODO
+1.    Figure out why docker doesn't run apache2 with php mod by default.  
+2.    Determine how to run sushi-config.yaml as preconfig for sushi --init.  #Publish web site to localhost so that it is all working as designed for test suite after docker container is running. 
 
 ### Attribution
 By Jason Brelsford
