@@ -9,7 +9,7 @@ docker run -it -v $(pwd)/app-local:/app/app-local -p 80:80 fhir-ig-builder:lates
 ### Restart apache2 so that the php modules are loaded.  Not sure why this doesn't work already.
 Run this command /etc/init.d/apache2 restart
 ### Initialize IG 
-sushi --init # Accept the default name ExampleIG.
+sushi init # Accept the default name ExampleIG.
 ### Change Directory to ExampleIG
 "cd ExampleIG".
 ### Run the publisher against the fsh - run this from inside ExampleIG dir.
@@ -26,7 +26,7 @@ Apache 2.0
 
 ### TODO
 1.    Figure out why docker doesn't run apache2 with php mod by default.  
-2.    Determine how to run sushi-config.yaml as preconfig for sushi --init.  #Publish web site to localhost so that it is all working as designed for test suite after docker container is running. 
+2.    Determine how to run sushi-config.yaml as preconfig for sushi init.  #Publish web site to localhost so that it is all working as designed for test suite after docker container is running. 
 
 ### Attribution
 By Jason Brelsford
